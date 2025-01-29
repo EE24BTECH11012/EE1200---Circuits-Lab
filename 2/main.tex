@@ -45,8 +45,8 @@ To find the RC circuit response with square wave input and plot the output and i
 \item A digital function generator
 \item A Cathode Ray Oscilloscope
 \item Connecting wires
-\item A resistance ( $100 \Omega$ )
-\item A capacitor ( $1000 \mu F$ )
+\item A resistance ( $1 k\Omega$ )
+\item A capacitor ( $1 \mu F$ )
 \item Oscilloscope probe
 \end{itemize}
 
@@ -68,34 +68,52 @@ To find the RC circuit response with square wave input and plot the output and i
 
 \subsection{\textbf{PROCEDURE : }}
 \begin{itemize}
-\item Connect the RC-circuit as shown in \eqref{eq:fig}.
-\begin{figure}[!ht]
-\centering
-\resizebox{1\textwidth}{!}{%
-\begin{circuitikz}
-\tikzstyle{every node}=[font=\LARGE]
-\draw (6.25,17.25) to[short] (7.5,17.25);
-\draw (7.5,17.25) to[R] (9.25,17.25);
-\draw (9.25,17.25) to[C] (11.25,17.25);
-\draw (6.25,17.25) to[battery1] (6.25,14.25);
-\draw (6.25,14.25) to[short] (9.25,14.25);
-\draw (9,14.25) to[closing switch] (11.5,14.25);
-\draw (11.5,14.25) to[short] (11.5,17.25);
-\draw (10.75,17.25) to[short] (11.5,17.25);
-\node [font=\Large] at (8.25,17.75) {100 $\Omega$};
-\node [font=\Large] at (10.25,18) {1000 $\mu$ F};
-\node [font=\normalsize] at (5.25,16.25) {Input from};
-\node [font=\normalsize] at (4.75,15.75) {function generator};
-\draw (9.25,17.25) to[short] (9.25,15.75);
-\draw (11.5,17.25) to[short] (13.75,17.25);
-\node [font=\normalsize] at (13.25,16.5) {to CRO};
-\draw (9.25,15.75) to[crossing] (13.75,15.75);
-\end{circuitikz}
-}%
-\label{eq:fig}
-\end{figure}\item Input a square wave of amplitude 5 V from the function generator, with time period equal to $RC$. The corresponding output is captured from the CRO.
+\item Connect the RC-circuit as shown in \eqref{fig:fig}.
+\begin{figure}[h!]
+    \centering
+    \begin{circuitikz}
+        % Define circuit components
+        \draw 
+        (0,0) node[ground]{} % Ground symbol
+        (0,0) to[square voltage source, l=\(5V\)] (0,3) % Square wave voltage source
+        to[R, l=$1 k\Omega$] (3,3) % Resistor
+        to[C, l=$1 \mu F$] (3,0) % Capacitor
+        -- (0,0); % Closing the circuit
+    \end{circuitikz}
+    \label{fig:fig}
+    \caption{RC Circuit with a 5V Square Wave Input}
+\end{figure}
+
+\item Input a square wave of amplitude 5 V from the function generator, with time period equal to $RC$. The corresponding output is captured from the CRO.
 \item The experiment is repeated for two more values of frequency such that $RC >> T $ and $RC << T$, and capture them.
 \item The figures are then compared with those created by python.
+\end{itemize}
+
+\subsection{\textbf{VERIFICATION : }} \\
+\begin{itemize}
+\item $RC << T$ :
+We have 
+\begin{align}
+	V &= V_{0} \left( 1 - e^\frac{-t}{\tau} \right)
+\end{align}
+Substituting $t = 2.44 s, R = 1000 \Omega, C = 1 \mu F$, we have
+\begin{align}
+	V &\approx 5.0
+\end{align}
+\item $RC == T$ :
+Substituting $t = 740  \mu s, R = 1000 \Omega, C = 1 \mu F$, we have
+\begin{align}
+	V &\approx 3 V
+\end{align}
+\item $RC >> T$ :
+We have 
+\begin{align}
+	V &= V_{0} \left( 1 - e^\frac{-t}{\tau} \right)
+\end{align}
+Substituting $t = 220 \mu s, R = 1000 \Omega, C = 1 \mu F$, we have
+\begin{align}
+	V &\approx 2.5 V 
+\end{align}
 \end{itemize}
 
 \subsection{\textbf{FIGURES : }} \\
@@ -126,5 +144,6 @@ To find the RC circuit response with square wave input and plot the output and i
     {\includegraphics[ width=0.31\textwidth]{fig3.png}}\\
     \caption{$RC >> T$}
 \end{figure*}
+
 
 \end{document}
