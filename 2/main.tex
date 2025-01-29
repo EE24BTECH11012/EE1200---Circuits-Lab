@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % For including images/logo
+\usepackage{geometry} % For custom margins
+\usepackage{fancyhdr} % For custom headers/footers
+\usepackage{titling}  % For custom title formatting
+\usepackage{amsmath}  % For advanced math formatting
+\usepackage{amssymb}  % For additional math symbols
+\usepackage{enumitem} % For custom enumeration
+\usepackage{xcolor}   % For text coloring
+\usepackage{circuitikz}
+
+% Set margins
+\geometry{a4paper, margin=1in}
+
+% Title, name, and date
+\title{\textbf{EE1200 - ELECTRIC CIRCUITS LAB}}
+\author{EE24BTECH11012 - Bhavanisankar G S \\ EE24BTECH11019 - Dwarak A}
+\date{\today}
+
+% Add logo to the title
+\pretitle{%
+    \begin{center}
+    \includegraphics[width=0.5\textwidth]{IITH.png} \\ % Replace with your logo file
+    \vspace{1cm} % Adjust spacing as needed
+    \LARGE
+}
+\posttitle{\end{center}}
+
+\begin{document}
+
+% First page with title, name, date, and logo
+\maketitle
+\thispagestyle{empty} % Remove page number from the first page
+
+\newpage
+
+\section{Find the RC circuit response with all three cases below for square wave input, and plot the output and input for a transient response for the first five cycles and steady-state response as well. \\
+	RC == T \\ RC $>>$ T \\ RC $<<$ T}
+
+\subsection{\textbf{AIM :}} \\
+To find the RC circuit response with square wave input and plot the output and input for transient response for the first five cycles and steady state response.
+
+\subsection{\textbf{APPARATUS REQUIRED :}} \\
+\begin{itemize}
+\item A digital function generator
+\item A Cathode Ray Oscilloscope
+\item Connecting wires
+\item A resistance ( $100 \Omega$ )
+\item A capacitor ( $1000 \mu F$ )
+\item Oscilloscope probe
+\end{itemize}
+
+\subsection{\textbf{THEORY : }}
+\begin{itemize}
+\item RC circuit consists of a resistor (R) and capacitor (C) connected in series. When a square wave input is applied to such a circuit, the response is determined by the charging and discharging behaviour of the capacitor and the associated time constant ( $\tau$ ).
+\item Time constant for a series RC circuit is the product of the magnitude of Resistance and capacitance.
+\begin{align}
+	\tau = R C
+\end{align}
+\item Voltage across the capacitor varies as
+\begin{align}
+	V_{C} (t) &= V_{0} \left( {1 - e^{\frac{-t}{\tau}}} \right) \text{ for charging } \\
+	V_{C} (t) &= V_{0} e^{\frac{-t}{\tau}} \text{ for discharging }
+\end{align}
+\item For \textbf{High frequency input} ( RC $<<$ T ), the capacitor has enough time to almost fully charge and discharge during each cycle. Hence, the voltage across the capacitor closely resembles the input with rounded edges due to exponential charging/discharging.
+\item For \textbf{Low frequency input} ( RC $>>$ T ), the capacitor does not have enough time to fully charge or discharge. Hence, the voltage across capacitor appears as a triangular waveform with reduced amplitude.
+\end{itemize}
+
+\subsection{\textbf{PROCEDURE : }}
+\begin{itemize}
+\item Connect the RC-circuit as shown in \eqref{eq:fig}.
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw (6.25,17.25) to[short] (7.5,17.25);
+\draw (7.5,17.25) to[R] (9.25,17.25);
+\draw (9.25,17.25) to[C] (11.25,17.25);
+\draw (6.25,17.25) to[battery1] (6.25,14.25);
+\draw (6.25,14.25) to[short] (9.25,14.25);
+\draw (9,14.25) to[closing switch] (11.5,14.25);
+\draw (11.5,14.25) to[short] (11.5,17.25);
+\draw (10.75,17.25) to[short] (11.5,17.25);
+\node [font=\Large] at (8.25,17.75) {100 $\Omega$};
+\node [font=\Large] at (10.25,18) {1000 $\mu$ F};
+\node [font=\normalsize] at (5.25,16.25) {Input from};
+\node [font=\normalsize] at (4.75,15.75) {function generator};
+\draw (9.25,17.25) to[short] (9.25,15.75);
+\draw (11.5,17.25) to[short] (13.75,17.25);
+\node [font=\normalsize] at (13.25,16.5) {to CRO};
+\draw (9.25,15.75) to[crossing] (13.75,15.75);
+\end{circuitikz}
+}%
+\label{eq:fig}
+\end{figure}\item Input a square wave of amplitude 5 V from the function generator, with time period equal to $RC$. The corresponding output is captured from the CRO.
+\item The experiment is repeated for two more values of frequency such that $RC >> T $ and $RC << T$, and capture them.
+\item The figures are then compared with those created by python.
+\end{itemize}
+
+\subsection{\textbf{FIGURES : }} \\
+
+\begin{figure*}[!htb]
+    {\includegraphics[ width=0.31\textwidth]{5.png}}
+    \hspace{\fill}
+    {\includegraphics[ width=0.31\textwidth]{6.png}}
+    \hspace{\fill}
+    {\includegraphics[ width=0.31\textwidth]{fig1.png}}\\
+    \caption{$ RC << T $}
+\end{figure*}
+
+\begin{figure*}[!htb]
+    {\includegraphics[ width=0.31\textwidth]{3.png}}
+    \hspace{\fill}
+    {\includegraphics[ width=0.31\textwidth]{4.png}}
+    \hspace{\fill}
+    {\includegraphics[ width=0.31\textwidth]{fig2.png}}\\
+    \caption{$RC == T $}
+\end{figure*}
+
+\begin{figure*}[!htb]
+    {\includegraphics[ width=0.31\textwidth]{1.png}}
+    \hspace{\fill}
+    {\includegraphics[ width=0.31\textwidth]{2.png}}
+    \hspace{\fill}
+    {\includegraphics[ width=0.31\textwidth]{fig3.png}}\\
+    \caption{$RC >> T$}
+\end{figure*}
+
+\end{document}

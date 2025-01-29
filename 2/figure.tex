@@ -1,0 +1,27 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (6.25,17.25) to[short] (7.5,17.25);
+\draw (7.5,17.25) to[R] (9.25,17.25);
+\draw (9.25,17.25) to[C] (11.25,17.25);
+\draw (6.25,17.25) to[battery1] (6.25,14.25);
+\draw (6.25,14.25) to[short] (9.25,14.25);
+\draw (9,14.25) to[closing switch] (11.5,14.25);
+\draw (11.5,14.25) to[short] (11.5,17.25);
+\draw (10.75,17.25) to[short] (11.5,17.25);
+\node [font=\Large] at (8.25,17.75) {100 $\Omega$};
+\node [font=\Large] at (10.25,18) {1000 $\mu$ F};
+\node [font=\normalsize] at (5.25,16.25) {Input from};
+\node [font=\normalsize] at (4.75,15.75) {function generator};
+\draw (9.25,17.25) to[short] (9.25,15.75);
+\draw (9.25,15.75) to[short] (11.25,15.75);
+\draw (11.25,15.75) to[short] (12,15.75);
+\draw (12,15.75) to[short] (13.75,15.75);
+\draw (11.5,17.25) to[short] (13.75,17.25);
+\node [font=\normalsize] at (13.25,16.5) {to CRO};
+\end{circuitikz}
+}%
+\label{eq:fig}
+\end{figure}
