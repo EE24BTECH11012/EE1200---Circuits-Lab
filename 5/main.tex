@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{circuitikz}
+\usepackage{tikz}
+
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzset{every node/.style={font=\LARGE}}
+\draw (8.25,10.25) node[op amp,scale=1] (opamp2) {};
+\draw (opamp2.+) to[short] (6.75,9.75);
+\draw  (opamp2.-) to[short] (6.75,10.75);
+\draw (9.45,10.25) to[short](9.75,10.25);
+\draw (6.75,10.75) to[R] (3.25,10.75);
+\draw (6.25,10.75) to[short] (6.25,10);
+\draw (3.25,10) to[R] (6.25,10);
+\draw (6.75,10.75) to[short] (6.75,11.75);
+\draw (6.75,11.75) to[R] (10.75,11.75);
+\draw (10.75,11.75) to[R] (12.5,11.75);
+\draw (9.75,10.25) to[short] (9.75,11.75);
+\draw (11,11) to[R] (12.75,11);
+\draw (12.5,11.75) to[short] (13.5,11.75);
+\draw (15,11.25) node[op amp,scale=1] (opamp2) {};
+\draw (opamp2.+) to[short] (13.5,10.75);
+\draw  (opamp2.-) to[short] (13.5,11.75);
+\draw (16.2,11.25) to[short](16.5,11.25);
+\draw (13.5,10.75) to (13.5,10.25) node[ground]{};
+\draw (6.75,9.75) to (6.75,9.5) node[ground]{};
+\draw (13.5,11.75) to[short] (13.5,11.25);
+\draw (12.75,11) to[short] (13.5,11);
+\draw (13.75,11.75) to[short] (13.75,12.75);
+\draw (13.75,12.75) to[R] (16.5,12.75);
+\draw (16.5,12.75) to[short] (16.5,11.25);
+\draw (16.5,10.75) to (16.5,10.25) node[ground]{};
+\node [font=\LARGE] at (2.75,10.75) {V_1};
+\node [font=\LARGE] at (2.75,10) {V_2};
+\node [font=\LARGE] at (17.5,10.75) {V_{out}};
+\draw [<->, >=Stealth] (16.75,11.25) -- (16.75,10.5);
+\node [font=\LARGE] at (10.5,11) {$V_3$};
+\node [font=\LARGE] at (5,11.5) {$R_{1}$};
+\node [font=\LARGE] at (4.75,9.25) {$2R_{1}$};
+\node [font=\LARGE] at (8.75,12.25) {$2R_{1}$};
+\node [font=\LARGE] at (12,10.5) {$R_{1}$};
+\node [font=\LARGE] at (11.5,12.25) {$R_{1}$};
+\node [font=\LARGE] at (15,13.5) {$R_{1}$};
+\draw (13.5,11) to[short] (13.5,11.5);
+\node [font=\LARGE] at (10,12.25) {$V_4$};
+\end{circuitikz}
+}%
+\caption{Circuit Diagram 1}
+\label{fig:circuit1}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzset{every node/.style={font=\normalsize}}
+\draw (2.25,10.25) to[R] (4.25,10.25);
+\draw (4.25,12.25) to[short] (4.25,7.75);
+\draw (4.25,12.25) to[R] (7.5,12.25);
+\draw (4.25,7.75) to[R] (7.5,7.75);
+\draw (4.25,10.25) to[short] (5,10.25);
+\draw (6.5,9.75) node[op amp,scale=1] (opamp2) {};
+\draw (opamp2.+) to[short] (5,9.25);
+\draw  (opamp2.-) to[short] (5,10.25);
+\draw (7.7,9.75) to[short](8,9.75);
+\draw (5,9.25) to (5,9) node[ground]{};
+\draw (7.5,12.25) to[short] (8,12.25);
+\draw (8,12.25) to[D] (8,9.75);
+\draw (7.5,7.75) to[short] (8,7.75);
+\draw (8,9.75) to[D] (8,7.75);
+\draw (8,12.25) to[R] (10.25,12.25);
+\draw (10.25,12.25) to[short] (10.25,11);
+\draw (10.25,11.25) to[short] (10.25,10.5);
+\draw (11.75,10) node[op amp,scale=1] (opamp2) {};
+\draw (opamp2.+) to[short] (10.25,9.5);
+\draw  (opamp2.-) to[short] (10.25,10.5);
+\draw (12.95,10) to[short](13.25,10);
+\draw (8,7.75) to[short] (10.25,7.75);
+\draw (10.25,9.5) to[short] (10.25,7.75);
+\draw (10.25,12.25) to[R] (13.5,12.25);
+\draw (13.5,12.25) to[short] (13.5,10);
+\draw (13.5,10) to[short] (12.75,10);
+\draw (13.5,10) to[R] (13.5,7.75);
+\draw (13.5,7.75) to (13.5,7.25) node[ground]{};
+\draw (2.25,10.25) to[sinusoidal voltage source, sources/symbol/rotate=auto] (2.25,8.75);
+\draw (2.25,8.75) to (2.25,8.5) node[ground]{};
+\node [font=\Large] at (14,10) {\textit{V_{out}}};
+\node [font=\normalsize] at (1,9.5) {\textit{sin wave}};
+\node [font=\normalsize] at (14,9) {\textit{R_{L}}};
+\end{circuitikz}
+}%
+\caption{Circuit Diagram 2}
+\label{fig:circuit2}
+\end{figure}
+
+\end{document}
+

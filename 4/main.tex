@@ -68,7 +68,7 @@ To study and analyze the transient response of an LC circuit, determine the natu
 \item The waveform from the oscilloscope is recorded.
 \item The oscillation period is measured using cursors.
 \item The decay rate is measured.
-\item From the graph, it can be seen that the damping frequency is 60 kHz .
+\item From the graph, it can be seen that the damping frequency is approximately 90 kHz .
 \end{itemize}
 
 \subsection{\textbf{CALCULATION : }}
@@ -96,8 +96,9 @@ It can be seen that
 \begin{align}
 	\Omega_{n} &= \frac{1}{\sqrt{2.2 \times 10^{-3} \times 10^{-9} }} \\
 	&= 107 \text{ kHz} \\
-	\zeta &= 12.5 \times \sqrt{\frac{10^{-9}}{2.2 \times 10^{-3}}} \\
-	&= 8.09 \times 10^{-3}
+	\zeta &= \sqrt{1 - (\Omega_{d}/\Omega_{n})^2} \\
+	&\approx 0.55 \\
+	R &\approx 1640 \Omega
 \end{align}
 
 \subsection{\textbf{CONCLUSION : }}
@@ -111,10 +112,7 @@ It can be seen that
 \subfigure[Voltage across capacitor]{\includegraphics[width=0.45\textwidth]{fig_exp.jpg}}
 \subfigure[Theoretical Result]{\includegraphics[width=0.45\textwidth]{codes/fig.png}}
 \caption{Comparison of Experimental and Theoretical Results}
-\subfigure[Voltage across inductor]
-{\includegraphics[width=0.45\textwidth]{fig1.jpg}}
-\subfigure[Theoretical Result]
-{\includegraphics[width=0.45\textwidth]{codes/fig_inductor_voltage.png}}
+
 \end{figure}
 
 \end{document}

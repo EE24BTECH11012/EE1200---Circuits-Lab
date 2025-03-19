@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.3)  24 FEB 2025 19:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.3)  14 MAR 2025 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -636,11 +636,21 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<IITH.png, id=4, 225.84375pt x 225.84375pt>
-File: IITH.png Graphic file (type png)
-<use IITH.png>
-Package pdftex.def Info: IITH.png  used on input line 30.
-(pdftex.def)             Requested size: 226.48395pt x 226.49794pt.
+
+LaTeX Warning: File `IITH.png' not found on input line 30.
+
+
+! Package pdftex.def Error: File `IITH.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \maketitle
+               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -653,57 +663,93 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./IITH.png>] [2{/usr/share
-/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (54.96346pt too wide) in paragraph at lines 35--35
+[]\OT1/cmr/bx/n/17.28 BAND-PASS FIL-TER US-ING SALLEN-KEY SECOND-
  []
 
-<circuit.png, id=19, 481.8pt x 301.125pt>
-File: circuit.png Graphic file (type png)
-<use circuit.png>
-Package pdftex.def Info: circuit.png  used on input line 78.
-(pdftex.def)             Requested size: 452.9679pt x 283.11266pt.
-[3 <./circuit.png>]
-<fig_exp.jpg, id=29, 1284.8pt x 574.145pt>
-File: fig_exp.jpg Graphic file (type jpg)
-<use fig_exp.jpg>
-Package pdftex.def Info: fig_exp.jpg  used on input line 112.
-(pdftex.def)             Requested size: 203.83417pt x 91.08537pt.
-<codes/fig.png, id=30, 462.528pt x 346.896pt>
-File: codes/fig.png Graphic file (type png)
-<use codes/fig.png>
-Package pdftex.def Info: codes/fig.png  used on input line 113.
-(pdftex.def)             Requested size: 203.83417pt x 152.87819pt.
- [4 <./fig_exp.jpg> <./codes/fig.png>] (./main.aux)
+[2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<LPF.png, id=20, 260.975pt x 130.4875pt>
+File: LPF.png Graphic file (type png)
+<use LPF.png>
+Package pdftex.def Info: LPF.png  used on input line 117.
+(pdftex.def)             Requested size: 140.41893pt x 70.20932pt.
+<HPF.png, id=22, 311.1625pt x 155.58125pt>
+File: HPF.png Graphic file (type png)
+<use HPF.png>
+Package pdftex.def Info: HPF.png  used on input line 119.
+(pdftex.def)             Requested size: 140.41893pt x 70.21031pt.
+<BPF.png, id=23, 260.975pt x 176.66pt>
+File: BPF.png Graphic file (type png)
+<use BPF.png>
+Package pdftex.def Info: BPF.png  used on input line 121.
+(pdftex.def)             Requested size: 140.41893pt x 95.05263pt.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 \end
+          {figure*}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[3]
+! Undefined control sequence.
+<recently read> \degree 
+                        
+l.144 ...em Phase difference goes from 90 $\degree
+                                                  $ to 0 $\degree$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \degree 
+                        
+l.144 ...ence goes from 90 $\degree$ to 0 $\degree
+                                                  $
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4 <./LPF.png> <./HPF.png> <./BPF.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 31263 strings out of 474222
- 793599 string characters out of 5748734
- 1932975 words of memory out of 5000000
- 53207 multiletter control sequences out of 15000+600000
- 567476 words of font info for 72 fonts, out of 8000000 for 9000
+ 31294 strings out of 474222
+ 794056 string characters out of 5748734
+ 1934975 words of memory out of 5000000
+ 53236 multiletter control sequences out of 15000+600000
+ 567685 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,10n,101p,424b,273s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,9n,101p,424b,268s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (4 pages, 242198 bytes).
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+t12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (4 pages, 135866 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

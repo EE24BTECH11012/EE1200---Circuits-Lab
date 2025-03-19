@@ -3,14 +3,14 @@ import matplotlib.pyplot as plt
 
 def voltage(t, T) :
     if t%T <= T/2 :
-        return 5
+        return 10
     else :
         return 0
 
 
 
-R = 1000 #Resistance
-C = 0.00001 #Capacitance
+R = 1e-6 #Resistance
+C = 1e-6 #Capacitance
 T = 0.01 #Time period
 tau = R*C
 h = 0.0005
@@ -24,7 +24,7 @@ def deriv(y, t) :
  #   x.append(x[i]+h)
   #  y.append(y[i]*(1 - (h/tau)) + h*voltage(x[i], T)/R)
 
-for i in range(10000) :
+for i in range(1000) :
     x.append(x[i]+h)
     k1 = h*deriv(y[i], x[i])
     k2 = h*deriv(y[i] + h/2, x[i])
@@ -32,7 +32,7 @@ for i in range(10000) :
     k4 = h*(deriv(y[i]+h, x[i]))
     y.append(y[i] + (1/6)*(k1 + 2*k2 + 2*k3 + k4))
     if ( x[i] - 0.0042 ) < 0.0001 :
-        print(y[i])
+        # print(y[i])
         
 
 plt.plot(x, y)

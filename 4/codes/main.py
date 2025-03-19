@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 NUM = 100  # More points for a smoother plot
 h = 0.0001
-R = 25
+R = 1640
 L = 1e-3
 C = 1e-9
 V0 = 5
