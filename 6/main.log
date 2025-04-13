@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.3)  14 MAR 2025 12:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.3)  19 MAR 2025 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,11 +679,11 @@ File: HPF.png Graphic file (type png)
 <use HPF.png>
 Package pdftex.def Info: HPF.png  used on input line 119.
 (pdftex.def)             Requested size: 140.41893pt x 70.21031pt.
-<BPF.png, id=23, 260.975pt x 176.66pt>
+<BPF.png, id=23, 908.39375pt x 301.125pt>
 File: BPF.png Graphic file (type png)
 <use BPF.png>
 Package pdftex.def Info: BPF.png  used on input line 121.
-(pdftex.def)             Requested size: 140.41893pt x 95.05263pt.
+(pdftex.def)             Requested size: 140.41893pt x 46.54523pt.
 
 
 ! LaTeX Error: There's no line here to end.
@@ -698,11 +698,62 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[3]
+<codes/Lowpass.png, id=24, 578.16pt x 361.35pt>
+File: codes/Lowpass.png Graphic file (type png)
+<use codes/Lowpass.png>
+Package pdftex.def Info: codes/Lowpass.png  used on input line 136.
+(pdftex.def)             Requested size: 140.41893pt x 87.75684pt.
+<codes/Highpass.png, id=25, 578.16pt x 361.35pt>
+File: codes/Highpass.png Graphic file (type png)
+<use codes/Highpass.png>
+Package pdftex.def Info: codes/Highpass.png  used on input line 137.
+(pdftex.def)             Requested size: 140.41893pt x 87.75684pt.
+<codes/Bandpass.png, id=26, 578.16pt x 361.35pt>
+File: codes/Bandpass.png Graphic file (type png)
+<use codes/Bandpass.png>
+Package pdftex.def Info: codes/Bandpass.png  used on input line 138.
+(pdftex.def)             Requested size: 140.41893pt x 87.75684pt.
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 ...ption{Mag vs Freq of Band Pass Filter}}\\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.139 \end{figure*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.139 \end{figure*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[3] [4 <./LPF.png> <./HPF.png> <./BPF.png> <./codes/Lowpass.png> <./codes/Highp
+ass.png> <./codes/Bandpass.png>]
 ! Undefined control sequence.
 <recently read> \degree 
                         
-l.144 ...em Phase difference goes from 90 $\degree
+l.164 ...em Phase difference goes from 90 $\degree
                                                   $ to 0 $\degree$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -713,7 +764,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \degree 
                         
-l.144 ...ence goes from 90 $\degree$ to 0 $\degree
+l.164 ...ence goes from 90 $\degree$ to 0 $\degree
                                                   $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -721,20 +772,20 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[4 <./LPF.png> <./HPF.png> <./BPF.png>] (./main.aux)
+[5] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 31294 strings out of 474222
- 794056 string characters out of 5748734
- 1934975 words of memory out of 5000000
- 53236 multiletter control sequences out of 15000+600000
- 567685 words of font info for 73 fonts, out of 8000000 for 9000
+ 31316 strings out of 474222
+ 794586 string characters out of 5748734
+ 1935975 words of memory out of 5000000
+ 53258 multiletter control sequences out of 15000+600000
+ 567992 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,101p,424b,268s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,9n,101p,424b,300s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -746,10 +797,10 @@ blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (4 pages, 135866 bytes).
+Output written on main.pdf (5 pages, 327393 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

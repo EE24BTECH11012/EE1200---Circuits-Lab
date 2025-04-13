@@ -130,17 +130,36 @@ The three types of filters are shown in Figure \ref{fig:lpf}, Figure \ref{fig:hp
 \end{itemize}
 
 \subsection{\textbf{OBSERVATION : }}
+The frequency response of HPF, LPF and Bandpass filters can be seen in the figures attached.
+
+\begin{figure*}[!htb]
+    {\centering \includegraphics[ width=0.31\textwidth]{codes/Lowpass.png} \caption{Mag vs Freq of Low Pass Filter}
+    {\centering \includegraphics[ width=0.31\textwidth]{codes/Highpass.png} \caption{Mag vs Freq of High Pass Filter}
+    {\centering \includegraphics[ width=0.31\textwidth]{codes/Bandpass.png} \caption{Mag vs Freq of Band Pass Filter}}\\
+\end{figure*}
+
 \begin{itemize}
-	\item The frequency response of HPF, LPF and Bandpass filters can be seen in the figures attached.
-	\item Experimental cutoff frequency = 
-	\item Theoritical cut-off frequency =
-	\item Frequency range of Bandpass filter = 
+	\item \textbf{LOW PASS FILTER} : \\
+	$ R_1 = R_2 = 15  k \Omega \\
+	  C_1 = C_2 = 1 nF $ \\
+	  Experimental cutoff frequency \approx 10 kHz \\
+	  Theoretical cutoff frequency = 10610.32 Hz 
+	 \item \textbf{HIGH PASS FILTER} : \\
+	 $ R_1 = R_2 = 15 k \Omega \\
+	 C_1 = C_2 = 1 nF $ \\
+	 Experimental cutoff frequency \approx 10 kHz \\
+	 Theoretical cutoff frequency = 10610.32 Hz 
+	\item The bandpass filter is connected by cascading HPF and LPF, i.e., by connecting the $v_{out}$ of LPF as $v_{in}$ of HPF. \\
+	$R_{LPF} = 15 \Omega, R_{HPF} = 150 \Omega \\
+	C_1 = C_2 = 1 \mu F $ \\
+	The frequency range of BPF = 1 Hz - 1000 Hz
 \end{itemize}
+
 
 \subsection{\textbf{RESULT} : }
 \begin{itemize}
-	\item Cut-off frequency =
-	\item Roll-off slope = 
+	\item Cut-off frequency for LPF of BPF = 1 Hz \\
+	      Cut-off frequency for HPF of BPF = 1 kHz
 	\item Phase difference goes from 90 $\degree$ to 0 $\degree$ 
 \end{itemize}
 \end{document}
